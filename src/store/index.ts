@@ -4,7 +4,7 @@ import goodsReducer from './todoSlice';
 
 const store = configureStore({
   reducer: {
-    users: todoReducer
+    todolist: todoReducer
     
   }
 });

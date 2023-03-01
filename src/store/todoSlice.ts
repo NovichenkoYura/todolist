@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { TodoTypes } from '../types/types'
 
-interface Todo {
-  title: string;
-  description: string;
-  id: number;
-}
+// interface Todo {
+//   title: string;
+//   description: string;
+//   id: number;
+// }
 
 interface TodoState {
-  todoList: Todo[];
+  todoList: TodoTypes[];
 }
 
 const initialState: TodoState = {
@@ -20,7 +21,7 @@ const todoSlice = createSlice({
 
   reducers: {
     getTodoItem(state, action) {
-      console.log(action.payload)
+      // console.log(action.payload)
       state.todoList.push(action.payload)
       // state.goodsFilteredByBrandsArr.includes(action.payload)
       //   ? (state.goodsFilteredByBrandsArr = state.goodsFilteredByBrandsArr.filter(

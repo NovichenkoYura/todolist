@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -37,6 +38,14 @@
   }
 }
 
+/* App */
+
+.app{
+  background-color: rgb(218, 214, 214);
+  width: 100vw;
+  height: 100vh;
+}
+
 /* addtodo */
 .addtodo__form{
 display: flex;
@@ -53,9 +62,51 @@ align-items: end;
 .addtodo__item{
   display: flex;
   flex-direction: column;
+  margin: 0 20px;
 }
 
 .addtodo__btn{
   height: 20px;
   width: 70px;
+}
+
+/* TodoItem */
+.todoRenderItem{
+  display: flex;
+  flex-direction: row;
+}
+
+/* table */
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;  
+}
+
+th, td {
+  background-color: rgb(192, 190, 190);
+  width: 40px;  
+}
+
+.todoTable{
+  margin: 40px 0 0 60px;
+  width:80%;
+  word-break: break-all;
+  table-layout: fixed
+}
+
+.todoTable__title{
+  width: 200px;
+  max-width: 200px;  
+}
+
+.todoTable__status{
+  width: 80px;
+}
+
+/* width:100%;word-break: break-all;table-layout: fixed */
+
+.todoTable__description{
+  width: 400px;
+  max-width: 400px;
 }
