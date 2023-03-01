@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/* addtodo */
+.addtodo__form{
+display: flex;
+flex-direction: row;
+align-items: end;
+}
+
+.addtodo__list{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  }
+
+.addtodo__item{
+  display: flex;
+  flex-direction: column;
+}
+
+.addtodo__btn{
+  height: 20px;
+  width: 70px;
+}
