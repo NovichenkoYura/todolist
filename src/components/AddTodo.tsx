@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../api/hooks";
 import { getTodoItem } from "../store/todoSlice";
-// import { v4 as uuidv4 } from 'uuid';
 
 export const AddTodo = () =>{
     const dispatch = useAppDispatch();
@@ -31,8 +30,6 @@ export const AddTodo = () =>{
                         onChange={(e)=>setTitleValue(e.target.value)}                        
                 />
                 {!isTitleFilled && <span className="errormessage">This field is empty</span>}
-
-
             </li>
             <li className="addtodo__item">
                 <h3>Description</h3>

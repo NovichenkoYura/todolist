@@ -37,12 +37,12 @@ export const TodoItem: React.FC<TodoTypes> = ({
         <>
         <div className="modal-body">
           <h1>Title: {titleValue}</h1>
-          <h2>Description:{descriptionValue}</h2>
-          <p>Decr text</p>
+          <h2>Description:</h2>
+          <p>{descriptionValue}</p>
           <div className="modal__status">
-            <span>Status: {checked? "On": "Off"}</span>
+            <span>Status: {checked? "Done": "Need to do"}</span>
           </div>
-          <button onClick={closeModal}>Close Modal</button>
+          <button onClick={closeModal} className='modalClose_btn'>Close Modal</button>
           </div>
         </>
       </Modal>

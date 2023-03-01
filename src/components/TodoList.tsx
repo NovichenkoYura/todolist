@@ -2,8 +2,6 @@ import { useAppSelector } from "../api/hooks";
 import { TodoTypes } from "../types/types";
 import { TodoItem } from "./TodoItem";
 
-// type TodoItemType = Omit<TodoTypes, 'title' | 'description'>;
-
 export const TodoList: React.FC<TodoTypes> = () => {
   const { todoList } = useAppSelector((state) => state.todolist);
   return (
