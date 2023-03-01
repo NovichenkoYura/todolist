@@ -1,0 +1,35 @@
+.modal {
+    z-index: 2;
+    translate: 100% 0;
+    height: 250px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* top: 0;
+    left: 0; */
+    /* @include centerRow; */
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    /* background: white; */
+}
+
+.modal.open{
+    z-index: 99;
+    translate: 0;
+    opacity: 1;
+    pointer-events: all;
+    background: white;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+

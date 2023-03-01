@@ -3,5 +3,6 @@ export interface TodoTypes {
   id: number;
   titleValue: string;
   descriptionValue: string;
+  status: boolean
   
 }

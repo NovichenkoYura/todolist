@@ -1,16 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { AddTodo } from './components/AddTodo';
+// import { Modal } from './components/Modal';
 import { TodoList } from './components/TodoList';
 
-function App() {
+export const App = () =>{
   return (
     <div className="app">
       <AddTodo/>
-      <TodoList key={0} id={0} titleValue={''} descriptionValue={''}/>
+      <TodoList key={0} id={0} titleValue={''} descriptionValue={''} status={false}/>   
+
     </div>
   );
 }
 
-export default App;
+// key={0} id={0} titleValue={''} descriptionValue={''}

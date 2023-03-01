@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../api/hooks";
 import { getTodoItem } from "../store/todoSlice";
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 export const AddTodo = () =>{
     const dispatch = useAppDispatch();
@@ -9,8 +9,6 @@ export const AddTodo = () =>{
     const [descriptionValue, setDescriptionValue]=useState('')
     const { todoList, isDescriptionFilled, isTitleFilled} = useAppSelector((state) => state.todolist);
     const id = todoList.length + 1; 
-   
-
     const passTodoToStore = () => {
         dispatch(getTodoItem({titleValue, descriptionValue, id}))
         setTitleValue('')

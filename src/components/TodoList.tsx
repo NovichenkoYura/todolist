@@ -26,6 +26,7 @@ export const TodoList: React.FC<TodoTypes> = () => {
             id={item.id}
             titleValue={item.titleValue}
             descriptionValue={item.descriptionValue}
+            status={item.status}
           />
         ))}
       </table>
