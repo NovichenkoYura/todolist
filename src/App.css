@@ -90,23 +90,33 @@ th, td {
 
 .todoTable{
   margin: 40px 0 0 60px;
-  width:80%;
+  width:60%;
   word-break: break-all;
   table-layout: fixed
 }
 
 .todoTable__title{
-  width: 200px;
-  max-width: 200px;  
+  width: 100px;
 }
 
 .todoTable__status{
-  width: 80px;
+  width: 40px;
 }
-
-/* width:100%;word-break: break-all;table-layout: fixed */
 
 .todoTable__description{
-  width: 400px;
-  max-width: 400px;
+  width: 200px;
 }
+.todoItem__row{
+  text-align: center;
+  cursor: pointer;
+}
+
+.errormessage{
+  color: red;
+  font-size: 12px;
+}
+
+.addtodoInput__error{
+  border: 1px solid red;
+}
+

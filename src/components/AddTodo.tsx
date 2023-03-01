@@ -7,9 +7,9 @@ export const AddTodo = () =>{
     const dispatch = useAppDispatch();
     const [titleValue, setTitleValue]=useState('')
     const [descriptionValue, setDescriptionValue]=useState('')
-    const { todoList } = useAppSelector((state) => state.todolist);
+    const { todoList, isDescriptionFilled, isTitleFilled} = useAppSelector((state) => state.todolist);
     const id = todoList.length + 1; 
-    // array.length + 1  
+   
 
     const passTodoToStore = () => {
         dispatch(getTodoItem({titleValue, descriptionValue, id}))
@@ -28,9 +28,13 @@ export const AddTodo = () =>{
                         type="text"
                         id="title-task"
                         placeholder="Enter title"
+                        className={`${!isTitleFilled && 'addtodoInput__error'}`}
                         value={titleValue}
                         onChange={(e)=>setTitleValue(e.target.value)}                        
                 />
+                {!isTitleFilled && <span className="errormessage">This field is empty</span>}
+
+
             </li>
             <li className="addtodo__item">
                 <h3>Description</h3>
@@ -38,9 +42,11 @@ export const AddTodo = () =>{
                         type="text"
                         id="desription-task"
                         placeholder="Enter description"
+                        className={`${!isDescriptionFilled && 'addtodoInput__error'}`}
                         value={descriptionValue}
                         onChange={(e)=>setDescriptionValue(e.target.value)}                           
                 />
+                 {!isDescriptionFilled && <span className="errormessage">This field is empty</span>}
             </li>
         </ul>
         <button type="button" className="addtodo__btn" onClick={()=>passTodoToStore()}>Create</button>
